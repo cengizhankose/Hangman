@@ -65,7 +65,7 @@ int main(void)
 		}
 		
 	
-	
+	//sa krdsm
 	return 0;
 }
 
