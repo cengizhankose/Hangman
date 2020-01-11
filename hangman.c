@@ -7,7 +7,7 @@ int main(void)
 {
 	srand(time(NULL));
 	
-	char guessWords [] [16]=
+	char guessWords [] [16] =
 	
 	{
 	"istanbul",
@@ -21,27 +21,24 @@ int main(void)
 	
 	// index for random word
 	
-	int randomIndex = rand() % 6; // assign module into the amount of province you have
-	
-	int fullrand = 0;
-	
+	int randomIndex = rand() % 6; // assign module into the amount of province you have	
 	int numLives = 5;
 	int numCorrect = 0;
-	int oldCorrect = 0;
-	
+	int oldCorrect = 0;	
 	int lengthOfWord = strlen(guessWords[randomIndex]);
-	int letterGuessed[9] = {0,0,0,0,0,0,0,0,0};
-	
-	int quit = 0;
-	
+	int letterGuessed[9] = {0,0,0,0,0,0,0,0,0};	
+	int quit = 0;	
 	int loopIndex = 0;
 	
 	char guess[16];
+	char letterEntered;
 	
 	printf("guessWords:%s\nrandomIndex:%d\nlengthOfWord:%d\n",guessWords[randomIndex],randomIndex,lengthOfWord);
 	
 	while (numCorrect < lengthOfWord)
 	{
+		
+		printf("Number correct so far: %d\n",numCorrect);
 		printf("Enter a guess letter:");
 		fgets(guess, 16, stdin);
 		
@@ -53,7 +50,35 @@ int main(void)
 			break;
 		}
 		
+		
+		letterEntered = guess[0];	
+		printf("LetterEntered:%c\n",letterEntered);
+		
+		for (loopIndex = 0; loopIndex < lengthOfWord; loopIndex++)
+		
+		{
+			if(letterGuessed[loopIndex] == 1)
+			
+			{
+				continue;
+			}
+			
+			
+			
+			if(letterEntered == guessWords[randomIndex][loopIndex])
+			
+			{
+				
+				letterGuessed[loopIndex] = 1;
+				numCorrect++;
+				
+			}
+			
+		}
+		
 	}	
+	
+	
 	
 	
 		
@@ -65,8 +90,7 @@ int main(void)
 		}
 		
 	
-	//sa krdsm
+	
 	return 0;
 }
-
 
