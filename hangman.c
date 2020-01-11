@@ -21,7 +21,7 @@ int main(void)
 	
 	// index for random word
 	
-	int randomIndex = rand() % 6; // assign module into the amount of province you have	
+	int randomIndex = rand() % 5; // assign module into the amount of province you have	
 	int numLives = 5;
 	int numCorrect = 0;
 	int oldCorrect = 0;	
@@ -33,12 +33,47 @@ int main(void)
 	char guess[16];
 	char letterEntered;
 	
-	printf("guessWords:%s\nrandomIndex:%d\nlengthOfWord:%d\n",guessWords[randomIndex],randomIndex,lengthOfWord);
+	// printf("guessWords:%s\nrandomIndex:%d\nlengthOfWord:%d\n",guessWords[randomIndex],randomIndex,lengthOfWord);
 	
 	while (numCorrect < lengthOfWord)
 	{
 		
+			printf("\n\nNew Turn...\nHangman Word: \n");
+		
+			for (loopIndex = 0; loopIndex < lengthOfWord; loopIndex++)
+		
+		{
+			if(letterGuessed[loopIndex] == 1)
+			
+			{
+				printf("%c",guessWords[randomIndex][loopIndex]);
+			}
+			
+			else
+			{
+				printf("-");
+			}
+			
+			
+			
+			
+		}
+		
+		
+		printf("\n");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		printf("Number correct so far: %d\n",numCorrect);
+		printf("Number of life: %d\n",numLives);
+		
 		printf("Enter a guess letter:");
 		fgets(guess, 16, stdin);
 		
@@ -53,6 +88,8 @@ int main(void)
 		
 		letterEntered = guess[0];	
 		printf("LetterEntered:%c\n",letterEntered);
+		
+		oldCorrect = numCorrect;
 		
 		for (loopIndex = 0; loopIndex < lengthOfWord; loopIndex++)
 		
@@ -74,8 +111,28 @@ int main(void)
 				
 			}
 			
+			
+			
 		}
 		
+		if (oldCorrect == numCorrect)
+		{
+			
+			numLives--;
+			printf("Sorry, wrong guess\n");
+			
+			if(numLives == 0)
+			{
+				break;
+			}
+			
+		}
+		
+		
+		else
+			{
+				printf("Correct guess! :)\n");
+			}
 	}	
 	
 	
@@ -89,6 +146,16 @@ int main(void)
 			
 		}
 		
+		else if (numLives == 0)
+		
+		{
+			printf("\nSorry, you loose the word was <%s>",guessWords[randomIndex]);
+		}
+		
+		else
+		{
+			printf("\nYOU WIN!!!");
+		}
 	
 	
 	return 0;
