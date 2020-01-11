@@ -183,6 +183,7 @@ int main(void)
 				letterGuessed[loopIndex] = 1;
 				numCorrect++;
 				
+				
 			}
 			
 			
@@ -206,6 +207,7 @@ int main(void)
 		else
 			{
 				printf("Correct guess! :)\n");
+				numLives++;
 			}
 	}	
 	
