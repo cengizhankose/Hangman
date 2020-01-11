@@ -96,7 +96,7 @@ int main(void)
 	// index for random word
 	
 	int randomIndex = rand() % 81; // assign module into the amount of province you have	
-	int numLives = 5;
+	int numLives = 3;
 	int numCorrect = 0;
 	int oldCorrect = 0;	
 	int lengthOfWord = strlen(guessWords[randomIndex]);
@@ -107,12 +107,20 @@ int main(void)
 	char guess[16];
 	char letterEntered;
 	
+	printf("--------------------------------------------\n");
+      printf("| #  #   #   #   #  #### #   #   #   #   # |\n");
+      printf("| #  #  # #  ##  # #     ## ##  # #  ##  # |\n");
+      printf("| #### ##### # # # #  ## # # # ##### # # # |\n");
+      printf("| #  # #   # #  ## #   # #   # #   # #  ## |\n");
+      printf("| #  # #   # #   #  ###  #   # #   # #   # |\n");
+      printf("--------------------------------------------\n\n");
+	
 	// printf("guessWords:%s\nrandomIndex:%d\nlengthOfWord:%d\n",guessWords[randomIndex],randomIndex,lengthOfWord);
 	
 	while (numCorrect < lengthOfWord)
 	{
 		
-			printf("\n\nNew Turn...\nHangman Word: \n");
+			printf("\nNew Turn...\nHangman Word: \n");
 		
 			for (loopIndex = 0; loopIndex < lengthOfWord; loopIndex++)
 		
