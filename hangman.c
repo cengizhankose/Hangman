@@ -3,6 +3,8 @@
 #include <string.h>
 #include <time.h>
 
+void showHangman(int choice);
+
 int main(void)
 {
 	srand(time(NULL));
@@ -107,7 +109,7 @@ int main(void)
 	char guess[16];
 	char letterEntered;
 	
-	printf("--------------------------------------------\n");
+	  printf("--------------------------------------------\n");
       printf("| #  #   #   #   #  #### #   #   #   #   # |\n");
       printf("| #  #  # #  ##  # #     ## ##  # #  ##  # |\n");
       printf("| #### ##### # # # #  ## # # # ##### # # # |\n");
@@ -116,6 +118,7 @@ int main(void)
       printf("--------------------------------------------\n\n");
 	
 	// printf("guessWords:%s\nrandomIndex:%d\nlengthOfWord:%d\n",guessWords[randomIndex],randomIndex,lengthOfWord);
+	 printf("lengthOfWord:%d\n",lengthOfWord);
 	
 	while (numCorrect < lengthOfWord)
 	{
@@ -202,7 +205,9 @@ int main(void)
 		{
 			
 			numLives--;
-			printf("Sorry, wrong guess\n");
+			
+			showHangman(numLives);
+			printf("\nSorry, wrong guess\n");
 			
 			if(numLives == 0)
 			{
@@ -214,8 +219,10 @@ int main(void)
 		
 		else
 			{
-				printf("Correct guess! :)\n");
-				numLives++;
+				showHangman(numLives);
+				printf("\nCorrect guess! :)\n");
+				// numLives++;
+				
 			}
 	}	
 	
@@ -244,3 +251,148 @@ int main(void)
 	
 	return 0;
 }
+
+
+
+
+
+void showHangman(int choice)                            /**This function show the hangman after each wrong try**/
+ {
+
+     switch(choice)
+     {
+
+     case 0:
+         system("cls");
+      printf("--------------------------------------------\n");
+      printf("| #  #   #   #   #  #### #   #   #   #   # |\n");
+      printf("| #  #  # #  ##  # #     ## ##  # #  ##  # |\n");
+      printf("| #### ##### # # # #  ## # # # ##### # # # |\n");
+      printf("| #  # #   # #  ## #   # #   # #   # #  ## |\n");
+      printf("| #  # #   # #   #  ###  #   # #   # #   # |\n");
+      printf("--------------------------------------------\n\n");
+      
+	printf("\n\t||===== ");
+	printf("\n\t||    | ");
+	printf("\n\t||   %cO/",'\\');
+	printf("\n\t||    | ");
+	printf("\n\t||   / %c",'\\');
+	printf("\n\t||      ");
+	break;
+     case 1:
+         system("cls");
+         
+         printf("--------------------------------------------\n");
+      printf("| #  #   #   #   #  #### #   #   #   #   # |\n");
+      printf("| #  #  # #  ##  # #     ## ##  # #  ##  # |\n");
+      printf("| #### ##### # # # #  ## # # # ##### # # # |\n");
+      printf("| #  # #   # #  ## #   # #   # #   # #  ## |\n");
+      printf("| #  # #   # #   #  ###  #   # #   # #   # |\n");
+      printf("--------------------------------------------\n\n");
+      
+      
+	printf("\n\t||===== ");
+	printf("\n\t||    | ");
+	printf("\n\t||   %cO/",'\\');
+	printf("\n\t||    | ");
+	printf("\n\t||     %c",'\\');
+	printf("\n\t||      ");
+	break;
+     case 2:
+         system("cls");
+         
+         printf("--------------------------------------------\n");
+      printf("| #  #   #   #   #  #### #   #   #   #   # |\n");
+      printf("| #  #  # #  ##  # #     ## ##  # #  ##  # |\n");
+      printf("| #### ##### # # # #  ## # # # ##### # # # |\n");
+      printf("| #  # #   # #  ## #   # #   # #   # #  ## |\n");
+      printf("| #  # #   # #   #  ###  #   # #   # #   # |\n");
+      printf("--------------------------------------------\n\n");
+      
+      
+	printf("\n\t||===== ");
+	printf("\n\t||    | ");
+	printf("\n\t||   %cO/",'\\');
+	printf("\n\t||    | ");
+	printf("\n\t||      ");
+	printf("\n\t||      ");
+	break;
+     case 3:
+         system("cls");
+         
+         printf("--------------------------------------------\n");
+      printf("| #  #   #   #   #  #### #   #   #   #   # |\n");
+      printf("| #  #  # #  ##  # #     ## ##  # #  ##  # |\n");
+      printf("| #### ##### # # # #  ## # # # ##### # # # |\n");
+      printf("| #  # #   # #  ## #   # #   # #   # #  ## |\n");
+      printf("| #  # #   # #   #  ###  #   # #   # #   # |\n");
+      printf("--------------------------------------------\n\n");
+      
+      
+	printf("\n\t||===== ");
+	printf("\n\t||    | ");
+	printf("\n\t||   %cO/",'\\');
+	printf("\n\t||      ");
+	printf("\n\t||      ");
+	printf("\n\t||      ");
+	break;
+     case 4:
+         system("cls");
+         
+         printf("--------------------------------------------\n");
+      printf("| #  #   #   #   #  #### #   #   #   #   # |\n");
+      printf("| #  #  # #  ##  # #     ## ##  # #  ##  # |\n");
+      printf("| #### ##### # # # #  ## # # # ##### # # # |\n");
+      printf("| #  # #   # #  ## #   # #   # #   # #  ## |\n");
+      printf("| #  # #   # #   #  ###  #   # #   # #   # |\n");
+      printf("--------------------------------------------\n\n");
+      
+      
+	printf("\n\t||===== ");
+	printf("\n\t||    | ");
+	printf("\n\t||   %cO ",'\\');
+	printf("\n\t||      ");
+	printf("\n\t||      ");
+	printf("\n\t||      ");
+	break;
+     case 5:
+         system("cls");
+         
+         printf("--------------------------------------------\n");
+      printf("| #  #   #   #   #  #### #   #   #   #   # |\n");
+      printf("| #  #  # #  ##  # #     ## ##  # #  ##  # |\n");
+      printf("| #### ##### # # # #  ## # # # ##### # # # |\n");
+      printf("| #  # #   # #  ## #   # #   # #   # #  ## |\n");
+      printf("| #  # #   # #   #  ###  #   # #   # #   # |\n");
+      printf("--------------------------------------------\n\n");
+      
+      
+	printf("\n\t||===== ");
+	printf("\n\t||    | ");
+	printf("\n\t||    O ");
+	printf("\n\t||      ");
+	printf("\n\t||      ");
+	printf("\n\t||      ");
+	break;
+		default:
+         system("cls");
+         
+         printf("--------------------------------------------\n");
+      printf("| #  #   #   #   #  #### #   #   #   #   # |\n");
+      printf("| #  #  # #  ##  # #     ## ##  # #  ##  # |\n");
+      printf("| #### ##### # # # #  ## # # # ##### # # # |\n");
+      printf("| #  # #   # #  ## #   # #   # #   # #  ## |\n");
+      printf("| #  # #   # #   #  ###  #   # #   # #   # |\n");
+      printf("--------------------------------------------\n\n");
+      
+    
+	printf("\n\t||===== ");
+	printf("\n\t||    | ");
+	printf("\n\t||    O ");
+	printf("\n\t||      ");
+	printf("\n\t||      ");
+	printf("\n\t||      ");
+	break;
+      }//end of switch-case
+      return;
+ }
