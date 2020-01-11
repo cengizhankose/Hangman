@@ -10,7 +10,7 @@ int main(void)
 	char guessWords [] [16] =
 	
 	{
-	"adana", 
+"adana", 
 "adiyaman", 
 "afyon", 
 "agri", 
