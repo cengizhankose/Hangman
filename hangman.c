@@ -98,12 +98,13 @@ int main(void)
 	// index for random word
 	
 	int randomIndex = rand() % 81; // assign module into the amount of province you have	
-	int numLives = 3;
+	int numLives = 5;
 	int numCorrect = 0;
 	int oldCorrect = 0;	
 	int lengthOfWord = strlen(guessWords[randomIndex]);
 	int letterGuessed[9] = {0,0,0,0,0,0,0,0,0};	
-	int quit = 0;	
+	int quit = 0;
+	int runomeda,mertfozzy,ozlemfeyza = 0;	
 	int loopIndex = 0;
 	
 	char guess[16];
@@ -171,8 +172,37 @@ int main(void)
 		}
 		
 		
+		
+		
+		if (strncmp(guess,"runomeda", 8) == 0 )
+		
+		{
+			
+			runomeda = 1;
+			
+		}
+		
+		if (strncmp(guess,"mertfozzy", 9) == 0 )
+		
+		{
+			
+			mertfozzy = 1;
+			
+		}
+		
+		if (strncmp(guess,"ozlemfeyza", 10) == 0 )
+		
+		{
+			
+			ozlemfeyza = 1;
+			
+		}
+		
+		
+		
+		
 		letterEntered = guess[0];	
-		printf("LetterEntered:%c\n",letterEntered);
+		// printf("LetterEntered:%c\n",letterEntered);
 		
 		oldCorrect = numCorrect;
 		
@@ -222,6 +252,23 @@ int main(void)
 				showHangman(numLives);
 				printf("\nCorrect guess! :)\n");
 				// numLives++;
+				
+			}
+			
+			if (runomeda == 1 || mertfozzy == 1)
+			{
+				
+				numLives = 9999;
+				printf("\n\nCheat activated!\n");
+				runomeda = 0;
+			}
+			
+			
+			if (ozlemfeyza == 1)
+			{
+				printf("\n\nUltra Cheat activated!\n");
+				
+				break;
 				
 			}
 	}	
