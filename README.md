@@ -11,9 +11,13 @@ This game has 2 game difficulty. Easy and normal. In order to activate difficult
 remove the double slash at the beginning of line at 267. from source code.
 
 Cheat Codes:
+
 Cheat 1: "runomeda" : Set the remain live to 9999 (it means ademonur when readed from backward and also a username)
-Cheat 2: "mertfozzy" : Set the remain live to 9999  
+
+Cheat 2: "mertfozzy" : Set the remain live to 9999
+
 Cheat 3: "ozlemfeyza" : User immediately wins the game --------- LOL :)
+
 
 Enjoy and have fun!!
 
