@@ -156,7 +156,7 @@ int main(void)
 	topic();
 
 	// Debugging Assistant
-	 printf("guessWords:%s\nrandomIndex:%d\nlengthOfWord:%d\n",guessWords[randomIndex],randomIndex,lengthOfWord);
+	// printf("guessWords:%s\nrandomIndex:%d\nlengthOfWord:%d\n",guessWords[randomIndex],randomIndex,lengthOfWord);
 
 	// Prints the length of the selected word for being user friendly
 	printf("lengthOfWord:%d\n", lengthOfWord);
