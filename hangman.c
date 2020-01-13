@@ -26,8 +26,8 @@ Enjoy and have fun!!
 #include <string.h>
 #include <time.h>
 
-void visual(int choice);	// Prototype of hangman statement as visually
-void topic(void);	// Prototype of hangman title at the top of the console
+void visual(int numLives);	// Prototype of hangman statement as visually
+void topic(void);			// Prototype of hangman title at the top of the console
 
 int main(void)
 {
@@ -122,20 +122,20 @@ int main(void)
 	// Index for random word	
 	int randomIndex = rand() % 81;	// assign module into the amount of province you have
 
-	//Declaring remain lives of the user	
+	// Declaring remain lives of the user	
 	int numLives = 6;
 
-	//Declaring and storing correct number the user replied
+	// Declaring and storing correct number the user replied
 	int numCorrect = 0;
 
-	//This declaration prevents the user from free win if user enters the same letter over and over already existed
+	// This declaration prevents the user from free win if user enters the same letter over and over already existed
 	int oldCorrect = 0;
 
 	// Calculates the length of the word
 	int lengthOfWord = strlen(guessWords[randomIndex]);
 
-	// store all the arrays to 0 unless the user enters correct letter
-	int letterGuessed[9] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+	// Store all the arrays to 0 unless the user enters correct letter
+	int letterGuessed[13] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
 	// quit from game feature	
 	int quit = 0;
