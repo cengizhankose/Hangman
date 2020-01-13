@@ -2,8 +2,8 @@
 A game called hangman for our project that is given us by lecturer Feyza Arikan at Beykoz University.
 
 
-Student Name: Adem Onur Oztas | Student ID:1904010025 
-Student Name: Mert Altuntas   | Student ID:1804010005 
+Student Name: Adem Onur Oztas | Student ID: 1904010025 
+Student Name: Mert Altuntas   | Student ID: 1804010005 
 
 This is a game called Hangman.
 We added and developed some extraordinary features compare to standart hangman games.
