@@ -5,7 +5,7 @@
 This is a game called Hangman.
 We added and developed some extraordinary features compare to standart hangman games.
 This game has 2 game difficulty. Easy and normal. In order to activate difficulty please
-remove the double slash at the beginning of line at 268. from source code.
+remove the double slash at the beginning of line at 267. from source code.
 
 Cheat Codes:
 
@@ -26,7 +26,7 @@ Enjoy and have fun!!
 #include <string.h>
 #include <time.h>
 
-void showHangman(int choice);	// Prototype of hangman statement as visually
+void visual(int choice);	// Prototype of hangman statement as visually
 void topic(void);	// Prototype of hangman title at the top of the console
 
 int main(void)
@@ -123,7 +123,7 @@ int main(void)
 	int randomIndex = rand() % 81;	// assign module into the amount of province you have
 
 	//Declaring remain lives of the user	
-	int numLives = 5;
+	int numLives = 6;
 
 	//Declaring and storing correct number the user replied
 	int numCorrect = 0;
@@ -175,12 +175,12 @@ int main(void)
 
 			{
 				printf("%c", guessWords[randomIndex][loopIndex]);
-			}
+			}	//end of if
 			else
 			{
 				printf("-");
-			}
-		}
+			}	//end of else
+		}	//end of for
 
 		// User Prompt
 		printf("\nCorrect Guess: %d\n", numCorrect);
@@ -195,28 +195,28 @@ int main(void)
 		{
 			quit = 1;
 			break;
-		}
+		}	// end of if
 
 		if (strncmp(guess, "runomeda", 8) == 0)
 
 		{
 			runomeda = 1;
 
-		}
+		}	// end of if
 
 		if (strncmp(guess, "mertfozzy", 9) == 0)
 
 		{
 			mertfozzy = 1;
 
-		}
+		}	// end of if
 
 		if (strncmp(guess, "ozlemfeyza", 10) == 0)
 
 		{
 			ozlemfeyza = 1;
 
-		}
+		}	// end of if
 
 		// Takes the first number of letter whatever user typed in
 		letterEntered = guess[0];
@@ -232,7 +232,7 @@ int main(void)
 
 			{
 				continue;
-			}
+			}	//end of if 
 
 			// Set value 0 to 1 which array is correct of the selected word  
 			if (letterEntered == guessWords[randomIndex][loopIndex])
@@ -241,32 +241,32 @@ int main(void)
 				letterGuessed[loopIndex] = 1;
 				numCorrect++;
 
-			}
-		}
+			}	//end of if
+		}	// end of for
 
 		// if user didn't entered the correct letter it takes a life point from user
 		if (oldCorrect == numCorrect)
 		{
 			numLives--;
 
-			showHangman(numLives);
+			visual(numLives);
 			printf("\nSorry, wrong guess\n");
 
 			// if there isn't left any life user loose
 			if (numLives == 0)
 			{
 				break;
-			}
-		}
+			}	// end of if
+		}	// end of if
 		else
 		{
-			showHangman(numLives);
+			visual(numLives);
 			printf("\nCorrect guess! :)\n");
 
 			// This is for easy difficulty
 			// numLives++;
 
-		}
+		}	// end of else
 
 		// if user types runomeda to console activate cheat
 		if (runomeda == 1)
@@ -274,7 +274,7 @@ int main(void)
 			numLives = 9999;
 			printf("\n\nCheat activated!\n");
 			runomeda = 0;
-		}
+		}	//end of if
 
 		// if user types mertfozzy to console activate cheat
 		if (mertfozzy == 1)
@@ -282,7 +282,7 @@ int main(void)
 			numLives = 9999;
 			printf("\n\nCheat activated!\n");
 			mertfozzy = 0;
-		}
+		}	//end of if
 
 		// if user types ozlemfeyza to console activates cheat and wins the game
 		if (ozlemfeyza == 1)
@@ -291,8 +291,8 @@ int main(void)
 
 			break;
 
-		}
-	}
+		}	//end of if
+	}	//end of while
 
 	// if user types quit to console the game stops
 	if (quit == 1)
@@ -300,23 +300,23 @@ int main(void)
 	{
 		printf("\nthe user quit early");
 
-	}
+	}	// end of if
 
 	// Prompt screen when user loose
 	else if (numLives == 0)
 
 	{
-		printf("\nSorry, you loose the word was<%s>", guessWords[randomIndex]);
-	}
+		printf("\nSorry, you loose the word was -----------> < %s >", guessWords[randomIndex]);
+	}	// end of else-if
 
 	// Prompt screen when user win
 	else
 	{
 		printf("\nYOU WIN!!!");
-	}
+	}	// end of else
 
 	return 0;
-}
+}	//end of main
 
 // Prints hangman title at the top of the console
 void topic(void)
@@ -330,12 +330,12 @@ void topic(void)
 	printf("| #  # #   # #   #  ###  #   # #   # #   # |\n");
 	printf("--------------------------------------------\n\n");
 
-}
+}	// end of topic
 
-// This function show the hangman after each wrong try
-void showHangman(int choice)
+// This function shows the hangman after each wrong try
+void visual(int numLives)
 {
-	switch (choice)
+	switch (numLives)
 	{
 		case 0:
 			system("cls");
@@ -404,10 +404,24 @@ void showHangman(int choice)
 			printf("\n\t||===== ");
 			printf("\n\t||    | ");
 			printf("\n\t||    O ");
-			printf("\n\t||      a");
+			printf("\n\t||      ");
 			printf("\n\t||      ");
 			printf("\n\t||      ");
 			break;
+
+		case 6:
+			system("cls");
+
+			topic();
+
+			printf("\n\t||===== ");
+			printf("\n\t||    | ");
+			printf("\n\t||      ");
+			printf("\n\t||      ");
+			printf("\n\t||      ");
+			printf("\n\t||      ");
+			break;
+
 		default:
 			system("cls");
 
@@ -415,11 +429,11 @@ void showHangman(int choice)
 
 			printf("\n\t||===== ");
 			printf("\n\t||    | ");
-			printf("\n\t||    O ");
+			printf("\n\t||      ");
 			printf("\n\t||      ");
 			printf("\n\t||      ");
 			printf("\n\t||      ");
 			break;
 	}	//end of switch-case
 	return;
-}
+}	//end of main
