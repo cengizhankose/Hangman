@@ -159,7 +159,7 @@ int main(void)
 	// printf("guessWords:%s\nrandomIndex:%d\nlengthOfWord:%d\n",guessWords[randomIndex],randomIndex,lengthOfWord);
 
 	// Prints the length of the selected word for being user friendly
-	printf("lengthOfWord:%d\n", lengthOfWord);
+	printf("Your word has %d letter\n", lengthOfWord);
 
 	// Game Loop
 	while (numCorrect < lengthOfWord)
@@ -272,6 +272,7 @@ int main(void)
 		if (runomeda == 1)
 		{
 			numLives = 9999;
+			printf("\033[1;31m");
 			printf("\n\nCheat activated!\n");
 			runomeda = 0;
 		}	//end of if
@@ -280,6 +281,7 @@ int main(void)
 		if (mertfozzy == 1)
 		{
 			numLives = 9999;
+			printf("\033[1;31m");
 			printf("\n\nCheat activated!\n");
 			mertfozzy = 0;
 		}	//end of if
@@ -287,6 +289,7 @@ int main(void)
 		// if user types ozlemfeyza to console activates cheat and wins the game
 		if (ozlemfeyza == 1)
 		{
+			printf("\033[1;31m");
 			printf("\n\nUltra Cheat activated!\n");
 
 			break;
