@@ -5,7 +5,7 @@
 This is a game called Hangman.
 We added and developed some extraordinary features compare to standart hangman games.
 This game has 2 game difficulty. Easy and normal. In order to activate difficulty please
-remove the double slash at the beginning of line at 267. from source code.
+remove the double slash at the beginning of line at 268. from source code.
 
 Cheat Codes:
 
@@ -160,7 +160,7 @@ int main(void)
 	// printf("guessWords:%s\nrandomIndex:%d\nlengthOfWord:%d\n",guessWords[randomIndex],randomIndex,lengthOfWord);
 
 	// Prints the length of the selected word for being user friendly
-	printf("lengthOfWord:%d\n", lengthOfWord);
+	printf("Your word has %d letter\n", lengthOfWord);
 
 	// Game Loop
 	while (numCorrect < lengthOfWord)
@@ -273,6 +273,7 @@ int main(void)
 		if (runomeda == 1)
 		{
 			numLives = 9999;
+			printf("\033[1;31m");
 			printf("\n\nCheat activated!\n");
 			runomeda = 0;
 		}	//end of if
@@ -281,6 +282,7 @@ int main(void)
 		if (mertfozzy == 1)
 		{
 			numLives = 9999;
+			printf("\033[1;31m");
 			printf("\n\nCheat activated!\n");
 			mertfozzy = 0;
 		}	//end of if
@@ -288,6 +290,7 @@ int main(void)
 		// if user types ozlemfeyza to console activates cheat and wins the game
 		if (ozlemfeyza == 1)
 		{
+			printf("\033[1;31m");
 			printf("\n\nUltra Cheat activated!\n");
 
 			break;
@@ -299,8 +302,7 @@ int main(void)
 	if (quit == 1)
 
 	{
-		printf("\nthe user quit early");
-		sleep(300);
+		printf("\nThe user quit early");
 
 	}	// end of if
 
@@ -308,16 +310,13 @@ int main(void)
 	else if (numLives == 0)
 
 	{
-		printf("\nSorry, you loose the word was -----------> < %s >", guessWords[randomIndex]);
-		sleep(300);
-		
+		printf("\nSorry, you lose the word was -----------> < %s >", guessWords[randomIndex]);
 	}	// end of else-if
 
 	// Prompt screen when user win
 	else
 	{
 		printf("\nYOU WIN!!!");
-		sleep(300);
 	}	// end of else
 
 	return 0;
