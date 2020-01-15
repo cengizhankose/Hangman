@@ -303,6 +303,7 @@ int main(void)
 
 	{
 		printf("\nThe user quit early");
+		sleep(10);
 
 	}	// end of if
 
@@ -311,12 +312,14 @@ int main(void)
 
 	{
 		printf("\nSorry, you lose the word was -----------> < %s >", guessWords[randomIndex]);
+		sleep(10);
 	}	// end of else-if
 
 	// Prompt screen when user win
 	else
 	{
 		printf("\nYOU WIN!!!");
+		sleep(10);
 	}	// end of else
 
 	return 0;
