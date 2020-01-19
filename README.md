@@ -1,5 +1,5 @@
 # Hangman
-A game called hangman for our project that is given us by lecturer Feyza Arikan at Beykoz University.
+A game called hangman for our project that is given us by lecturer Feyza Erkan at Beykoz University.
 
 
 Student Name: Adem Onur Oztas | Student ID: 1904010025 
