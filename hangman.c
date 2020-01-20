@@ -16,7 +16,7 @@ Cheat 3: "ozlemfeyza" : User immediately wins the game --------- LOL :)
 If you want to see our progress step by step check it out our Github link!
 https://github.com/runomeda/Hangman
 
-Enjoy and have fun!!!
+Enjoy and have fun!!!!!!!!!!!!!!!!!!
 
 */
 
