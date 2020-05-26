@@ -6,6 +6,7 @@ A game called hangman for our project that is given us by lecturer Feyza Erkan a
 
 
 Student Name: Adem Onur Oztas | Student ID: 1904010025 
+
 Student Name: Mert Altuntas   | Student ID: 1804010005 
 
 This is a game called Hangman.
