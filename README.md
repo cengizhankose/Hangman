@@ -1,4 +1,7 @@
 # Hangman
+
+![](https://github.com/runomeda/Hangman/blob/master/hang.jpg?raw=true)
+-------------------------------------------------------------------------------------------------------
 A game called hangman for our project that is given us by lecturer Feyza Erkan at Beykoz University.
 
 
