@@ -10,7 +10,7 @@ Student Name: Adem Onur Oztas | Student ID: 1904010025
 Student Name: Mert Altuntas   | Student ID: 1804010005 
 
 This is a game called Hangman.
-We added and developed some extraordinary features compare to standart hangman games.
+We added and developed some extraordinary features compare to standard hangman games.
 This game has 2 game difficulty. Easy and normal. In order to activate difficulty please
 remove the double slash at the beginning of line at 267. from source code.
 
